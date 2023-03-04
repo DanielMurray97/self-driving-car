@@ -1,7 +1,7 @@
 from easygopigo3 import EasyGoPiGo3
 from curve_detection import get_lane_curve
 import webcam
-import Movement
+import movement
 from time import sleep
 
 GPG = EasyGoPiGo3()
@@ -31,7 +31,7 @@ def car_main():
 
     print(total_curve)
 
-    Movement.direction(speed, total_curve, 0.05)
+    movement.direction(speed, total_curve, 0.05)
 
     ### For use with a working Ultrasonic Sensor ###
 

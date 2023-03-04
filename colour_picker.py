@@ -22,13 +22,13 @@ cv2.createTrackbar("VALUE Min", "HSV", 0, 255, empty)
 cv2.createTrackbar("VALUE Max", "HSV", 255, 255, empty)
 
 #cap = cv2.VideoCapture('vidNewHeight1.mp4')
-frameCounter = 0
+frame_counter = 0
 
 while True:
-    frameCounter += 1
-    if cap.get(cv2.CAP_PROP_FRAME_COUNT) == frameCounter:
+    frame_counter += 1
+    if cap.get(cv2.CAP_PROP_FRAME_COUNT) == frame_counter:
         cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
-        frameCounter = 0
+        frame_counter = 0
 
     _, img = cap.read()
     imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
